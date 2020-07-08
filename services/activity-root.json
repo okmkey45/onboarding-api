@@ -1,0 +1,53 @@
+      { 
+          "activity" : 
+          [
+              {
+                  "id" : "2dra7wqcyup"
+                  ,"activityType" : "email"
+                  ,"companyId" : "1or2ab05imf"
+                  ,"accountId" : ""
+                  ,"dateScheduled" : ""
+                  ,"notes" : ""
+                  ,"status" : "pending"
+                  ,"dateCreated" : "2019-02-25T08:22:15.648Z"
+                  ,"dateUpdated" : "2019-02-25T08:22:15.648Z"
+              }
+              ,
+              {
+                  "id" : "92lbr0x8ims"
+                  ,"activityType" : "inperson"
+                  ,"companyId" : "21r1aeuj87e"
+                  ,"accountId" : ""
+                  ,"dateScheduled" : ""
+                  ,"notes" : ""
+                  ,"status" : "closed"
+                  ,"dateCreated" : "2019-06-08T21:44:38.410Z"
+                  ,"dateUpdated" : "2019-06-08T21:44:38.410Z"
+              }
+              ,
+              {
+                  "id" : "m0mvoh0loj"
+                  ,"activityType" : "email"
+                  ,"companyId" : "21r1aeuj87e"
+                  ,"accountId" : ""
+                  ,"dateScheduled" : ""
+                  ,"notes" : ""
+                  ,"status" : "pending"
+                  ,"dateCreated" : "2019-02-25T08:22:34.560Z"
+                  ,"dateUpdated" : "2019-02-25T08:22:34.560Z"
+              }
+              ,
+              {
+                  "id" : "q1w2e3r4"
+                  ,"companyId" : "2w3e4r5t"
+                  ,"accountId" : "3e4r5t6y"
+                  ,"activityType" : "email"
+                  ,"dateScheduled" : "2020-05-01"
+                  ,"notes" : "All is good."
+                  ,"status" : "closed"
+                  ,"dateCreated" : "2020-03-05T21:41:29.356Z"
+                  ,"dateUpdated" : "2020-03-05T21:49:54.319Z"
+              }
+          ]
+       }
+    

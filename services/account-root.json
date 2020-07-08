@@ -1,0 +1,82 @@
+      { 
+          "account" : 
+          [
+              {
+                  "id" : "1c0x0mzp83t"
+                  ,"division" : "DryGoods"
+                  ,"companyId" : "1or2ab05imf"
+                  ,"spendingLimit" : ""
+                  ,"discountPercentage" : ""
+                  ,"status" : "active"
+                  ,"dateCreated" : "2019-02-25T08:12:00.579Z"
+                  ,"dateUpdated" : "2019-02-25T08:12:00.579Z"
+              }
+              ,
+              {
+                  "id" : "1yswvm4n0q"
+                  ,"companyId" : "21r1aeuj87e"
+                  ,"division" : "DryGoods"
+                  ,"spendingLimit" : "15000"
+                  ,"discountPercentage" : "15"
+                  ,"status" : "active"
+                  ,"dateCreated" : "2019-02-25T08:13:16.099Z"
+                  ,"dateUpdated" : "2020-01-20T02:24:34.476Z"
+              }
+              ,
+              {
+                  "id" : "2k8ue502vuk"
+                  ,"companyId" : "1or2ab05imf"
+                  ,"division" : "DryGoods"
+                  ,"spendingLimit" : "10000"
+                  ,"discountPercentage" : "10"
+                  ,"status" : "active"
+                  ,"dateCreated" : "2020-01-20T00:56:00.478Z"
+                  ,"dateUpdated" : "2020-01-20T00:56:00.478Z"
+              }
+              ,
+              {
+                  "id" : "3kzbw0ze078"
+                  ,"division" : "Military"
+                  ,"companyId" : "21r1aeuj87e"
+                  ,"spendingLimit" : ""
+                  ,"discountPercentage" : ""
+                  ,"status" : "active"
+                  ,"dateCreated" : "2019-02-25T08:12:51.530Z"
+                  ,"dateUpdated" : "2019-02-25T08:12:51.530Z"
+              }
+              ,
+              {
+                  "id" : "6x7hpmtxbss"
+                  ,"division" : "Pharmacy"
+                  ,"companyId" : "1or2ab05imf"
+                  ,"spendingLimit" : ""
+                  ,"discountPercentage" : ""
+                  ,"status" : "active"
+                  ,"dateCreated" : "2019-02-25T08:12:36.747Z"
+                  ,"dateUpdated" : "2019-02-25T08:12:36.747Z"
+              }
+              ,
+              {
+                  "id" : "bm4lr8c9nds"
+                  ,"companyId" : "1or2ab05imf"
+                  ,"division" : "DryGoods"
+                  ,"spendingLimit" : "10000"
+                  ,"discountPercentage" : "10"
+                  ,"status" : "active"
+                  ,"dateCreated" : "2020-01-20T00:57:00.045Z"
+                  ,"dateUpdated" : "2020-01-20T00:57:00.045Z"
+              }
+              ,
+              {
+                  "id" : "q1w2e3r4"
+                  ,"companyId" : "w2e3r4t5"
+                  ,"division" : "Military"
+                  ,"spendingLimit" : "10000"
+                  ,"discountPercentage" : "10"
+                  ,"status" : "active"
+                  ,"dateCreated" : "2020-02-29T02:34:21.120Z"
+                  ,"dateUpdated" : "2020-03-08T20:29:43.323Z"
+              }
+          ]
+       }
+    
