@@ -1,0 +1,20 @@
+**Ciclo 1:**
+Home
+-> Customer
+-> CreateCustomer(firstName, lastName, email, phone, text)
+-> CreatedCustomer
+-> Home
+
+**Ciclo 2:**
+Home
+-> Account
+-> CreateAccount(customerId, defaultDiscount, creditLimit)
+-> CreatedCustomer
+-> Home
+
+**Ciclo 3:**
+Home
+-> SalesActivity
+-> CreateSalesActivity(customerId, accountId, salesRepId, callDate)
+-> CreatedCustomer
+-> Home
