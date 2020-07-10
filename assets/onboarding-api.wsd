@@ -1,0 +1,19 @@
+title Onboarding API
+
+Home->+WIP:startOnboarding(identifier)
+
+WIP->+customerData: collectCustomerData(identifier, givenName, familyName, email, telephone, text)
+customerData-->-WIP: saveToWIP(identifier, givenName, familyName, email, telephone, text)
+
+WIP->+accountData: collectAccountData(identifier, discount, creditLimit)
+accountData-->-WIP: saveToWIP(identifier, discount, creditLimit)
+
+WIP->+activityData: collectActivityData(identifier, salesRepId, callDate)
+activityData-->-WIP: saveToWIP(identifier, salesRepId, callDate)
+
+WIP->+finalizeWIP: completeOnBoarding(identifier)
+finalizeWIP-->-Home: goHome
+
+WIP->+cancelWIP: cancelOnBoarding(identifier)
+cancelWIP-->-Home: goHome
+
