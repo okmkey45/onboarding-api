@@ -1,0 +1,163 @@
+{
+  "alps": {
+    "version": "0.1",
+    "title": "Onboarding API",
+    "doc": { 
+      "type": "text",
+      "value": "This is the ALPS document for BigCo's **Onboarding API**."
+    },
+    "descriptors": [
+      {
+        "id": "identifier",
+        "type": "semantic",
+        "text": "unique identifier for this record"
+      },
+      {
+        "id": "givenName",
+        "type": "semantic",
+        "text": "Customer's first name"
+      },
+      {
+        "id": "familyName",
+        "type": "semantic",
+        "text": "Customer's last name"
+      },
+      {
+        "id": "email",
+        "type": "semantic",
+        "text": "Customer's primary email account"
+      },
+      {
+        "id": "telephone",
+        "type": "semantic",
+        "text": "Customer's phone number"
+      },
+      {
+        "id": "status",
+        "type": "semantic",
+        "text": "Account status (active, inactive, suspended)"
+      },
+      {
+        "id": "maxValue",
+        "type": "semantic",
+        "text": "Account's maximum spending list"
+      },
+      {
+        "id": "discount",
+        "type": "semantic",
+        "text": "Account's default sales discount (as a percentage)"
+      },
+
+      {
+        "id": "wip",
+        "type": "group", 
+        "descriptors": [
+          {
+            "href": "#identifier"
+          },
+          {
+            "href": "#givenName"
+          },
+          {
+            "href": "#familyName"
+          },
+          {
+            "href": "#email"
+          },
+          {
+            "href": "#telephone"
+          },
+          {
+            "href": "#status"
+          },
+          {
+            "href": "#maxValue"
+          },
+          {
+            "href": "#discount"
+          }
+        ]
+      },
+      {
+        "id": "startOnboarding",
+        "type": "unsafe",
+        "rt": "wip"
+      },
+      {
+        "id": "collectCustomerData",
+        "type": "safe",
+        "rt": "wip",
+        "descriptors": [
+          {
+            "id": "#identifier"
+          }
+        ]
+      },
+      {
+        "id": "SaveToWIP",
+        "type": "idempotent",
+        "rt": "wip",
+        "descriptors": [
+          {
+            "href": "#identifier"
+          },
+          {
+            "href": "#givenName"
+          },
+          {
+            "href": "#familyName"
+          },
+          {
+            "href": "#email"
+          },
+          {
+            "href": "#telephone"
+          },
+          {
+            "href": "#status"
+          },
+          {
+            "href": "#maxValue"
+          },
+          {
+            "href": "#discount"
+          }
+        ]
+      },
+      {
+        "id": "collectAccountData",
+        "type": "safe",
+        "rt": "wip",
+        "descriptors": [
+          {
+            "href": "#identifier"
+          }
+        ]      
+      },
+      {
+        "id": "completeOnboarding",
+        "type": "idempotent",
+        "rt": "wip",
+        "descriptors": [
+          {
+            "href": "#identifier"
+          }
+        ]
+      },
+      {
+        "id": "abandonOnboarding",
+        "type": "idempotent",
+        "rt": "wip",
+        "descriptors": [
+          {
+            "href": "#identifier"
+          }
+        ]
+      },
+      {
+        "id": "goHome",
+        "type": "safe"
+      }
+    ]
+  }
+}
