@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "633f5086-9f3b-4285-bb2c-b477b0b9e391",
+		"name": "Company API Home Tests",
+		"description": "This collection tests the HOME resource of BigCo's Company API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Company Home",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "18c93482-3458-48fb-82e2-cbda510ecd99",
+						"exec": [
+							"/***********************",
+							"* COMPANY HOME",
+							"***********************/",
+							"",
+							"// 200 OK",
+							"pm.test('Status is 200', function() {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"// application/json",
+							"pm.test('Content-Type header is application/json', function() {",
+							"    var hdr = pm.response.headers.get('content-type');",
+							"    pm.expect(hdr).to.include('application/forms+json');",
+							"})",
+							"",
+							"// collect the response body",
+							"var body = pm.response.json();",
+							"",
+							"pm.test('Response body contains a valid links object', function() {",
+							"    pm.expect(body.home).to.be.an('object');",
+							"    pm.expect(body.home).to.have.property('links');",
+							"",
+							"    pm.expect(body.home.links).to.be.an('array');",
+							"    pm.expect(body.home.links[0]).to.have.property('id');",
+							"    pm.expect(body.home.links[0]).to.have.property('name');",
+							"    pm.expect(body.home.links[0]).to.have.property('rel');",
+							"    pm.expect(body.home.links[0]).to.have.property('href');",
+							"})",
+							"",
+							"pm.test('links.id is set to list', function() {",
+							"    pm.expect(body.home.links[2].id).to.include('list');",
+							"});",
+							"pm.test('links.name is set to list', function() {",
+							"    pm.expect(body.home.links[2].name).to.include('list');",
+							"});",
+							"pm.test('links.rel contains company and collection', function() {",
+							"    pm.expect(body.home.links[2].rel).to.include('company');",
+							"    pm.expect(body.home.links[2].rel).to.include('collection');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/forms+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://company-atk.herokuapp.com",
+					"protocol": "http",
+					"host": [
+						"company-atk",
+						"herokuapp",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company Create (missing properties)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1a29b36a-db9e-4400-addd-deda052c5c8a",
+						"exec": [
+							"/***********************************",
+							"COMPANY CREATE (missing properties)",
+							"************************************/",
+							"",
+							"// protocol",
+							"pm.test('Status is 400', function() {",
+							"    pm.expect(pm.response.code).to.equal(400);",
+							"});",
+							"pm.test('Content-Type includes application/problem+json', function() {",
+							"    var hdr = pm.response.headers.get('content-type');",
+							"    pm.expect(hdr).includes('application/problem+json');",
+							"});",
+							"",
+							"// structure",
+							"var body = pm.response.json();",
+							"var error = body.error",
+							"",
+							"pm.test('root has a valid error object', function() {",
+							"    pm.expect(error).to.be.an('array');",
+							"    error.forEach(function(obj) {",
+							"        pm.expect(obj).has.property('type');",
+							"        pm.expect(obj).has.property('title');",
+							"        pm.expect(obj).has.property('detail');",
+							"        pm.expect(obj).has.property('status');",
+							"        pm.expect(obj).has.property('instance');",
+							"    });",
+							"});",
+							"",
+							"// values",
+							"var obj = error[0];",
+							"",
+							"pm.test('error.type includes error', function() {",
+							"    pm.expect(obj.type).includes('error');",
+							"});",
+							"",
+							"pm.test('error.status includes 400', function() {",
+							"    pm.expect(obj.status).includes('400');",
+							"});",
+							"",
+							"pm.test('error.title includes Missing companyName, email, and status',",
+							"function() {",
+							"    pm.expect(obj.title).includes('Missing companyName');",
+							"    pm.expect(obj.title).includes('Missing email');",
+							"    pm.expect(obj.title).includes('Missing status');",
+							"});",
+							"",
+							"pm.test('error.detail includes Missing companyName, email, and status',",
+							"function() {",
+							"    pm.expect(obj.detail).includes('Missing companyName');",
+							"    pm.expect(obj.detail).includes('Missing email');",
+							"    pm.expect(obj.detail).includes('Missing status');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://company-atk.herokuapp.com",
+					"protocol": "http",
+					"host": [
+						"company-atk",
+						"herokuapp",
+						"com"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
